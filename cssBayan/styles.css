@@ -3,10 +3,12 @@
   --page-container-padding: 100px;
   --height-content-area: 35rem;
   --height-accord-title: 2.5rem;
+  --time-dur: 0.7s;
   --color-background-page: #888;
   --color-background-content: #666;
   --color-background-title: #444;
   --color-background-text: #999;
+  --color-background-accent: orange;
 }
 
 * {
@@ -53,9 +55,16 @@ li {
   max-width: var(--page-container-width);
   padding: 0 var(--page-container-padding);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ////////// accord ////////// */
+
+.accord:hover .accord__title {
+  color: var(--color-background-accent);
+  transition-duration: var(--time-dur);
+}
 
 .accord-item {
   margin-bottom: 0.3rem;
@@ -66,8 +75,14 @@ li {
   position: absolute;
 }
 
+.accord__input:hover~.accord__content {
+  height: calc(var(--height-content-area));
+  transition-duration: var(--time-dur);
+}
+
 .accord__input:checked~.accord__content {
   height: calc(var(--height-content-area));
+  transition-duration: var(--time-dur);
 }
 
 .accord__title {
@@ -89,8 +104,22 @@ li {
 
 .accord__content {
   background-color: var(--color-background-content);
+  transition-duration: var(--time-dur);
   height: 0px;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.accord__content:hover {
+  height: calc(var(--height-content-area));
+  transition-duration: var(--time-dur);
+}
+
+.accord__content-label {
+  position: absolute;
+  display: block;
+  width: calc(var(--page-container-width) - (var(--page-container-padding) * 2));
+  height: var(--height-content-area);
   cursor: pointer;
 }
 
