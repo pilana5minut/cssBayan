@@ -1,3 +1,14 @@
+:root {
+  --page-container-width: 1200px;
+  --page-container-padding: 100px;
+  --height-content-area: 35rem;
+  --height-accord-title: 2.5rem;
+  --color-background-page: #888;
+  --color-background-content: #666;
+  --color-background-title: #444;
+  --color-background-text: #999;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -36,4 +47,98 @@ a {
 
 li {
   list-style: none;
+}
+
+.page-container {
+  max-width: var(--page-container-width);
+  padding: 0 var(--page-container-padding);
+  margin: 0 auto;
+}
+
+/* ////////// accord ////////// */
+
+.accord-item {
+  margin-bottom: 0.3rem;
+}
+
+.accord__input {
+  appearance: none;
+  position: absolute;
+}
+
+.accord__input:checked~.accord__content {
+  height: calc(var(--height-content-area));
+}
+
+.accord__title {
+  min-height: var(--height-accord-title);
+  background-color: var(--color-background-title);
+  cursor: pointer;
+  display: block;
+  padding: 10px 20px;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accord__subtitle {
+  font-size: var(--height-accord-title);
+}
+
+.accord__content {
+  background-color: var(--color-background-content);
+  height: 0px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.accord__image {
+  margin: 0 auto;
+  width: auto;
+  height: var(--height-content-area);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.accord__image_item-1 {
+  background-image: url("assets/images/01-black-and-purple.jpg");
+}
+
+.accord__image_item-2 {
+  background-image: url("assets/images/02-black-attitude.jpg");
+}
+
+.accord__image_item-3 {
+  background-image: url("assets/images/03-black-magnification.jpg");
+}
+
+.accord__image_item-4 {
+  background-image: url("assets/images/04-blue-painting.jpg");
+}
+
+.accord__image_item-5 {
+  background-image: url("assets/images/05-composition-VIII.jpg");
+}
+
+.accord__image_item-6 {
+  background-image: url("assets/images/06-heavy-circles.jpg");
+}
+
+.accord__image_item-7 {
+  background-image: url("assets/images/07-multiple-circles.jpg");
+}
+
+.accord__image_item-8 {
+  background-image: url("assets/images/08-orange.jpg");
+}
+
+.accord__image_item-9 {
+  background-image: url("assets/images/09-unequal.jpg");
+}
+
+.accord__image_item-10 {
+  background-image: url("assets/images/10-yellow-accompaniment.jpg");
 }
