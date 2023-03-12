@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scrollbar-gutter: stable both-edges;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--color-background-page);
+  color: var(--color-background-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
