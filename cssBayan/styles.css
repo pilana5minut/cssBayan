@@ -195,7 +195,6 @@ li {
 .accord__image {
   margin: 0 auto;
   width: auto;
-  /* height: var(--height-content-area); */
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -242,14 +241,14 @@ li {
   background-image: url("assets/images/10-yellow-accompaniment.jpg");
 }
 
-/* ////////// adaptive ////////// */
-/* tablet 820x1180, */
-
-@media (max-width: 12rem) {
+@media (max-width: 120rem) {
   .accord__content-label {
-    max-width: calc(var(--page-container-width) - (var(--page-container-padding) * 10));
+    display: none;
   }
 }
+
+/* ////////// adaptive ////////// */
+/* tablet 820x1180, */
 
 @media (max-width: 82rem) {
   .page-container {
